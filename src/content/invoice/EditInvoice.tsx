@@ -85,7 +85,7 @@ const EditInvoice = () => {
           autoComplete="off"
         >
           <div>
-            <p>Create Invoice</p>
+            <p>Edit Invoice</p>
           </div>
           <div className="flex flex-col px-0">
             <TextField id="outlined" label="Invoice Date" defaultValue="" />

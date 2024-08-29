@@ -236,8 +236,8 @@ const RecentOrdersTable = ({ invoices }: { invoices: InvoiceInterface[] }) => {
               <TableCell>Invoice Number</TableCell>
               <TableCell>Name</TableCell>
               <TableCell>clientAddress</TableCell>
-              <TableCell align="right">invoiceDiscountAmount</TableCell>
-              <TableCell align="right">invoiceSubtotal</TableCell>
+              <TableCell align="right">invoice Discount Amount</TableCell>
+              <TableCell align="right">invoice Subtotal</TableCell>
               <TableCell align="right">Actions</TableCell>
             </TableRow>
           </TableHead>
