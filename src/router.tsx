@@ -6,6 +6,10 @@ import SidebarLayout from 'src/layouts/SidebarLayout';
 import BaseLayout from 'src/layouts/BaseLayout';
 
 import SuspenseLoader from 'src/components/SuspenseLoader';
+import InvoiceDashboard from './content/invoice';
+import NewInvoice from './content/invoice/newInvoice';
+import EditInvoice from './content/invoice/EditInvoice';
+
 
 const Loader = (Component) => (props) =>
   (
@@ -78,12 +82,32 @@ const StatusMaintenance = Loader(
 
 const routes: RouteObject[] = [
   {
+    path: 'invoice',
+    element: <SidebarLayout />,
+    children: [
+      {
+        path: '',
+        element: <InvoiceDashboard />
+      },{
+        path: 'new',
+        element: <NewInvoice />
+      },{
+        path: 'edit/:id',
+        element: <EditInvoice />
+      },
+    ]
+  },
+  {
     path: '',
     element: <BaseLayout />,
     children: [
-      {
+      /* {
         path: '/',
         element: <Overview />
+      }, */
+      {
+        path: '/',
+        element: <Navigate to="/invoice" replace />
       },
       {
         path: 'overview',
